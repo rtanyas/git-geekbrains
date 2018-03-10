@@ -44,7 +44,7 @@ class MyWindow(QtWidgets.QWidget):
         hbox.addWidget(self.cboSort)
 
         self.chkDesc = QtWidgets.QCheckBox("&Descendingly")
-        hbox.addWidget(self.chkDesc, alignment = QtCore.Qt.AlignRight)
+        hbox.addWidget(self.chkDesc, alignment=QtCore.Qt.AlignRight)
         vbox.addLayout(hbox)
         hbox = QtWidgets.QHBoxLayout()
 
@@ -94,6 +94,7 @@ class MyWindow(QtWidgets.QWidget):
 
     """
     def _refreshData(self):
+        self.model.setFilter('')
         sender = self.txtFilterSender.text()
         receiver = self.txtFilterReceiver.text()
         if sender and not receiver:

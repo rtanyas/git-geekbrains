@@ -37,7 +37,7 @@ def on_send_message():
         stm.setTable('messages')
         stm.select()
         rec = con.record('messages')
-        rec.setValue('from_client', '1122')
+        rec.setValue('from_client', '')
         rec.setValue('to_client', client_login)
         rec.setValue('message', msg)
         stm.insertRecord(-1, rec)
