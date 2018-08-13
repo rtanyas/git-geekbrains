@@ -1,0 +1,84 @@
+body {
+    background: #f8f8f8;
+}
+
+.main_menu {
+    list-style: none;
+}
+
+.main_menu li a {
+    color: #295177;
+    font-size: 20px;
+    font-style: bold;
+    text-decoration: none;
+}
+
+.header {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+}
+
+.book_short_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.book_detailed_description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.book_details {
+    color: #0c48a1;
+    font-size: 15px;
+    font-style: bold;
+}
+
+.book_details li {
+    list-style: none;
+    background: url(../images/book.png) no-repeat;
+    background-size: 1%;
+    padding-left: 20px;
+}
+
+.enquiry_form input[type="text"],
+.enquiry_form input[type="email"] {
+    width: 400px;
+    height: 20px;
+    color: #274e7d;
+    font-size: 15px;
+}
+
+.enquiry_form textarea {
+        width: 400px;
+        height: 300px;
+        color: #274e7d;
+        font-size: 15px;
+    }
+
+.book_cover {
+    height: 200px; 
+    /*width: 200px; */
+    border: 2px solid #547b8d;
+}
+
+.catalog_book_cover {
+    width: 100px;
+    /*height: 200px; */
+    border: 2px solid #547b8d;
+}
+
+/*
+p {
+    color: #547b8d;
+    font-size: 19px;     
+
+}
+*/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacts</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        English bookstore
+        <ul class="main_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="contacts.html">Contact us</a></li>
+        </ul>
+        <hr>
+        <h1>Contacts</h1>
+        <fieldset>
+            <legend>Online enquiry form</legend>
+            <form class="enquiry_form" action="contacts.html" method="post">
+                <label for="login">Login: </label><br>
+                <input id="login" type="text" name="username" placeholder="Email or phone number">
+                <br>
+                <label for="email">Password: </label><br>
+                <input id="email" type="email" name="email" placeholder="Password"><br><br>
+                <label for="subject">Enquiry subject: </label><br>
+                <input id="subject" type="text" name="enquiry_subject" placeholder="Enquiry subject"><br><br>
+                <label for="enquiry_detail">Enquiry detail: </label><br>
+                <textarea id="enquiry_detail" name="enquiry_detail"></textarea><br>
+                <input type="submit" value="Submit enquiry">
+            </form>
+        </fieldset>
+        <h2>Postal address</h2>
+        <p>
+            <b>Tel: </b> +7 111 111 11 11<br>
+            <b>Address: </b> Zelenograd, RU, Aleksandrovka st., 1111<br>
+            <b>Email address: </b> contact@bookstore.org<br>
+        </p>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7b0d078c20af101cf24c77d8cd8a50e4c659cca9e36e47e145d7b4ea43f7f9a2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        <br><br>
+        <p>
+            &copy; "All rights reserved"
+        </p>
+    </body>
+</html>
