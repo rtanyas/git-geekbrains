@@ -1,0 +1,309 @@
+body {
+    background: #f8f8f8;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 20px;
+    position: absolute;
+    top: 6px;
+}
+
+.header {
+    height: 60px;
+    /*margin-left: 20px;*/
+    position: relative;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    background: #eaeaea;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb9d23+51,fb9d23+56,ffc578+100 */
+    background: #fb9d23; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #fb9d23 51%, #fb9d23 56%, #ffc578 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #fb9d23 51%,#fb9d23 56%,#ffc578 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #fb9d23 51%,#fb9d23 56%,#ffc578 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#ffc578',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ 
+}
+
+.header img {
+    width: 50px;
+}
+
+.header:before {
+    content: '';
+    width: 100%;
+    border-top: 5px solid orange;
+    position: absolute;
+    left: 0;
+    top: -2px;  
+}
+
+.store_name {
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 730px;
+}
+
+.main_menu {
+    /*list-style: none; it is not list anymore, because we use float*/ 
+    float: right;
+    top: -3px;
+    position: absolute;
+    right: 25px;
+}
+
+.main_menu  li{
+    display: inline-block;
+    padding-right: 25px;
+}
+
+.main_menu li a {
+    color: #295177;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main_menu li a:hover {
+    color: #5f1248;
+    font-weight: bold;
+}
+
+.heading {
+    color: #000;
+    font-size: 18px;
+    font-weight: 555;
+    background: #eaeaea; 
+    overflow: hidden;
+    width: 100%
+}
+
+.book_info{
+    overflow: hidden;
+}
+
+.book_image{
+    float: left;
+    width: 18%;
+    background: black;
+}
+
+.book_image a{
+    display: block;
+}
+
+.book_cover {
+    width: 100%;
+    /*height: 272px;*/ 
+    border: 2px solid #547b8d;
+    box-sizing: border-box
+}
+
+.book_name {
+    margin: 0;
+    padding: 10px 0 10px 15px;
+    overflow: hidden;
+    font-style: italic;
+}
+
+.book_short_description{
+    color: #707070;
+    font-size: 14px;
+    line-height: 16px; 
+    float: right;
+    width: 805px;
+}
+
+.book_short_description p:first-letter {
+    font-style: italic;
+    color: #547b8d;
+    font-size: 21px;
+    font-weight: 600; 
+}
+
+.button_buy {
+    display: block;
+    text-decoration: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffaf4b+82,ff920a+100 */
+    background: #ffaf4b; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffaf4b 82%, #ff920a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffaf4b 82%,#ff920a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffaf4b 82%,#ff920a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=1 ); /* IE6-9 */
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    width: 40px;
+    font-style: italic;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.button_buy:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa84c+0,ff7b0d+100;Orange+3D */
+    background: #ffa84c; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ffa84c 0%,#ff7b0d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=1 ); /* IE6-9 */
+}
+
+.button_buy:active {
+    background: #547b8d
+}
+
+
+.book_detailed_description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    /*text-align: left;*/
+}
+
+.book_detailed_description p:first-letter {
+    color: #547b8d;
+    font-size: 21px;
+    font-weight: 600; 
+}
+
+.book_details {
+    color: #0c48a1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table_book_details table {
+    border-collapse: collapse;
+    /*border-spacing: 1px 3px;*/
+}
+
+.book_details td, .book_details th {
+    border: 1px solid black;
+    width: 30%;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.book_details caption {
+    border: 1px solid black;
+    border-bottom-width: 0;
+    /*border-style: solid;
+    border-color: black;
+    border-width: 1px 1px 0 1px;*/
+}
+
+.top_row {
+    height: 90px;
+}
+
+/*.book_details li {
+    list-style: none;
+    background: url(../images/book.png) no-repeat;
+    background-size: 1%;
+    padding-left: 20px;
+}*/
+
+.enquiry_form input[type="text"],
+.enquiry_form input[type="email"] {
+    width: 400px;
+    height: 20px;
+    color: #274e7d;
+    font-size: 15px;
+}
+
+.enquiry_form input[type="text"] {
+    text-transform: capitalize;
+}
+
+.enquiry_form input[type="email"]:focus {
+    background: #c4d4e7;
+    color: rgb(69, 173, 243);
+}
+
+.enquiry_form textarea {
+    width: 400px;
+    height: 300px;
+    color: #274e7d;
+    font-size: 15px;
+    }
+
+.catalog_info {
+    overflow: hidden;
+}
+
+.catalog_book_info {
+    width: 30%;
+    float: left;
+    margin-right: 3.33%;
+    /*outline: 1px solid #ccc;*/
+    height: 280px;
+}
+
+.catalog_book_info p {
+    padding-left: 5px;
+    overflow: hidden;
+}
+
+.catalog_book_info:nth-child(n+4) {
+    margin-top: 30px;
+}
+
+.catalog_book_title {
+   overflow: hidden;
+   padding: 0 5px;
+   margin-top: 0
+}
+
+/*
+.catalog_book_info:nth-child(3n) {
+    margin-right: 0;
+}*/
+
+
+.catalog_book_cover {
+    width: 60%;
+    /*height: 200px; */
+    border: 2px solid #547b8d;
+    float: left;
+}
+
+.book_cover:hover {
+    border-color: transparent;
+}
+
+.footer{
+    margin-top: 30px;
+    text-align: right;
+    height: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb9d23+51,fb9d23+56,ffc578+100 */
+    background: #fb9d23; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #fb9d23 51%, #fb9d23 56%, #ffc578 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #fb9d23 51%,#fb9d23 56%,#ffc578 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #fb9d23 51%,#fb9d23 56%,#ffc578 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#ffc578',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+    padding: 20px 10px 0 0;
+    font-weight: bold;
+}
+
+/*
+div::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -10px;
+    top: 27px;
+    background: red;
+    transform: rotate(45deg)   
+}*/
