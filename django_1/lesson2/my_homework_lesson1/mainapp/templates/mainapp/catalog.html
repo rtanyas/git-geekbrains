@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block url_title %}
+    {{ title|capfirst }} 
+{% endblock %}
+
+{% block menu %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+{% endblock %}
+
+{% block caption %}
+    Catalog
+{% endblock %}
+{% block content %}
+    <div class="catalog_info">
+        {% for book in books %}
+            <div class="catalog_book_info">
+                <img class="catalog_book_cover" src="{% static 'img/' %}{{book.image_file}}" alt="{{ book.alt }}" title="{{ book.title }}">
+                <h4 class="catalog_book_title">{{ book.title }}</h4>
+                <p>{{ book.description }}</p>
+                <p><a href="{% url 'book1' %}">{{ book.url_name }}</a></p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

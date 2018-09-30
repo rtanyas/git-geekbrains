@@ -1,0 +1,102 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block url_title %}
+    {{ title|lower }}  
+{% endblock %}
+
+{% block menu %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+{% endblock %}
+
+{% block content %}
+        <h1>
+            <i>Roald Dahl's Marvellous Joke Book</i>
+        </h1>
+        <a href="{% static 'img/RDMJB.jpg' %}" target="_blank">
+            <img class = "book_cover" 
+                 src="{% static 'img/RDMJB.jpg' %}"
+                 alt="book_cover"
+                 title="Roald Dahl's Marvellous Joke Book">  
+        </a>           
+        <br>
+        <h2 class="header">Description:</h2>
+        <p class="book_short_description">
+            Why do witches fly around on broomsticks? Because vacuum cleaners are too heavy, of course!
+        </p>
+        <p class="book_short_description">
+            And what do you call a fairy who hasn't taken a bath? That would be 'Stinkerbell'! 
+        </p>
+        <p class="book_short_description">
+            Roald Dahl was always full of fun and mischief and loved all kinds of jokes,
+            the sillier the better, so this hilarious book is sure to appeal to all his fans.
+            The book also features Quentin Blake's iconic illustrations.
+        </p>
+        <p class="book_short_description">
+            <strong>#1 Best Sellerin:</strong> Jokes & Riddles Humour
+        </p>
+        <h2 class="header">Product details:</h2>
+        <div class="table_book_details">
+            <table class="book_details">
+                <caption>Product details</caption>                 
+                <thead>
+                    <tr class="top_row">
+                        <th>Column1</th>
+                        <th>Column2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>ISBN:</b></td>
+                        <td>9780141340555</td>
+                    </tr> 
+                    <tr>
+                        <td rowspan="2"><b>Publisher:</b></td>
+                        <td>Penguin Books Ltd</td>
+                    </tr>
+                    <tr>
+                        <td>Puffin Books</td>
+                    </tr>
+                    <tr>
+                        <td><b>Format:</b></td>
+                        <td>Paperback</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dimensions:</strong></td> 
+                        <td>19.7cm x 12.8cm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pages:</strong></td> 
+                        <td>128</td>
+                    <tr>
+                        <td colspan="2">join_columns</td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2 class="header">Detailed description:</h2>
+        <p class="book_detailed_description">
+            Roald Dahl's Marvellous Joke Book is full of jokes, limericks, riddles, Knock knock and Doctor, doctor!
+            Here is a perfect joke book for young children, specially themed around Roald Dahl's best-loved characters such as
+            Charlie, George, The BFG, Matilda, James and many others.
+        </p>
+        <p class="book_detailed_description">
+            Roald Dahl was always full of fun and mischief and loved all kinds of jokes - the sillier the better!
+            From chocolate-covered chickens to grizzly grouchy grandmas to the disgusting Twits this marvellous collection has over 400 jokes,
+            and includes Roald Dahl's very own, extremely silly 'Knock, knock' jokes - guaranteed to keep his fans amused for hours.
+        </p>
+        <p class="book_detailed_description">
+            Illustrations throughout by the inimitable Quentin Blake.
+        </p>
+        <p class="book_detailed_description">
+            Which famous writer goes best with a hot dog? Roll Dahl of course!
+        </p>
+        <p class="book_detailed_description">
+            Listen to Roald Dahl audiobooks read by some very famous voices, including Kate Winslet, David Walliams and Steven Fry
+            - plus there are added squelchy soundeffects from Pinewood Studios!
+        </p>
+        <p class="book_detailed_description">
+            Look out for new Roald Dahl apps in the App store and Google Play- including the disgusting TWIT OR MISS! inspired by the revolting Twits.
+        </p>
+        <a href="{% url 'catalog' %}">Back to catalog</a>
+{% endblock %}

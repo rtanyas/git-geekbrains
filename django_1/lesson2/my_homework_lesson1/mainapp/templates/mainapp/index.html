@@ -1,0 +1,20 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block url_title %}
+    {{ title|upper }} 
+{% endblock %}
+
+{% block menu %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+{% endblock %}
+
+
+{% block caption %}
+    Home
+{% endblock %}
+{% block content %}
+    <p>
+        Welcome to the English bookstore!  
+    </p> 
+{% endblock %}
