@@ -1,0 +1,26 @@
+<ul class="main_menu">
+    <li>
+        <a href="{% url 'books:main' %}">Home</a>
+    </li>
+    <li>
+        <a href="{% url 'books:catalog' %}">Catalog</a>
+    </li>
+    <li>
+        <a href="{% url 'books:contacts' %}">Contact us</a>
+    </li>
+    {% if user.is_authenticated %}
+        <li>
+            <a href="{% url 'auth:edit' %}">
+                <!--{{ user.username|default:'User' }}-->
+                {{ user.first_name|default:'User' }}
+            </a>
+        </li>
+    {% endif %}
+    <li>
+        {% if user.is_authenticated %}
+            <a href="{% url 'auth:logout' %}">Log out</a>
+        {% else %}
+            <a href="{% url 'auth:login' %}">Log in</a>
+        {% endif %}
+    </li>
+</ul>

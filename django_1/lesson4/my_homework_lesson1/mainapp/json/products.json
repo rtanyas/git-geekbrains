@@ -1,0 +1,34 @@
+[
+    {
+        "author": "Roald Dahl",
+        "title": "Marvellous Joke Book",
+		"url_name": "Roald Dahl's Marvellous Joke Book",
+        "image_file": "books_images/RDMJB.jpg",
+        "description": "Roald Dahl's Marvellous Joke Book is full of jokes, limericks, riddles",
+		"alt": "book_cover"
+    },
+    {
+        "author": "Roald Dahl",
+        "title": "The Twits",
+		"url_name": "The Twits",
+        "image_file": "books_images/RDMJB.jpg",
+        "description": "To pay Mrs. Twit back for the worms in his spaghetti, Mr. Twit thought up a really clever nasty trick.",
+		"alt": "book_cover"
+    },
+    {
+        "author": "Roald Dahl",
+        "title": "Fantastic Mr. Fox",
+		"url_name": "Fantastic Mr. Fox",
+        "image_file": "books_images/RDMJB.jpg",
+        "description": "",
+		"alt": "book_cover"
+    },
+    {
+        "author": "Jeremy Strong",
+        "title": "Viking at school",
+		"url_name": "Viking at school",
+        "image_file": "books_images/RDMJB.jpg",
+        "description": "",
+		"alt": "book_cover"
+    }
+]

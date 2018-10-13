@@ -1,0 +1,17 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <form class="" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ edit_form.as_p }}
+        <input class="" type="submit" value="Save">
+    </form>
+    <button class="">
+        <a href="{% url 'books:main' %}" class="">
+            Home
+        </a>
+    </button>
+    <div class=""><img src="/media/{{ user.avatar }}"></div>
+{% endblock %}
