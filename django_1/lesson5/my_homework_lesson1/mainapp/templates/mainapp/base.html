@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block url_title %}
+        {% endblock %}
+    </title>    
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+    <div class="container">            
+            <div class="header">
+                <img class="logo" src="{% static 'img/book.png' %}" alt="books_logo">
+                <div class="store_name">English bookstore</div>
+                {% block menu %}
+                {% endblock %}
+            </div>
+            <hr>            
+        <h2>
+            {% block caption %}        
+                {{ caption|title }}
+            {% endblock %}
+        </h2>
+        {% block content %}
+        {% endblock %}
+        {% block footer %}
+        <hr>
+        <div class="footer">&copy; All rights reserved</div>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

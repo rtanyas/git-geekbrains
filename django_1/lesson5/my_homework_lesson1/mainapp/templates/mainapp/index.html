@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block url_title %}
+    {{ title|upper }} 
+{% endblock %}
+
+{% block menu %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+{% endblock %}
+
+
+{% block caption %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <p>
+       Welcome to the English bookstore!  
+    </p> 
+    <div class="catalog_info">
+        {% for author in authors %}
+            <div class="author_info">               
+                <!--<img class="author_foto" src="{{ author.author_foto.url }}" alt="" title="">-->
+                <!--<a href="{% url 'books:catalog' %}"><h4 class="author_name">{{ author.author }}</h4></a>-->
+                <h4 class="author_name">{{ author.author }}</h4>             
+                <p>{{ author.description }}</p>
+                <!--<p><a href="{% url 'books:book1' %}">{{ book.url_name }}</a></p>-->
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

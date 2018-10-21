@@ -1,0 +1,53 @@
+<div class=main_menu>
+<ul>
+    <li>
+        <a href="{% url 'books:main' %}">Home</a>
+    </li>
+    <!--<li>
+        <a href="{% url 'books:catalog' %}">All books</a>
+    </li>-->
+    <li>
+        <a href="{% url 'books:contacts' %}">Contact us</a>
+    </li>
+
+    <li>
+        <a href="{% url 'books:catalog' 0 %}" class="{% if request.resolver_match.kwargs.pk == '0' %}active{% endif %}">
+            All books
+        </a>
+        <ul>
+        {% for link in links_menu %}
+            <li>
+                <a href="{% url 'books:catalog' link.pk %}" class="{% if request.resolver_match.kwargs.pk|add:'0' == link.pk %}active{% endif %}">
+                    {{ link.author }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </li>
+
+    {% if user.is_authenticated %}
+        <li>
+            <a href="{% url 'auth:edit' %}">
+                <!--{{ user.username|default:'User' }}-->
+                {{ user.first_name|default:'User' }}
+            </a>
+        </li>
+    {% endif %}
+    <li>
+        {% if user.is_authenticated %}
+            <a href="{% url 'auth:logout' %}">Log out</a>
+        {% else %}
+            <a href="{% url 'auth:login' %}">Log in</a>
+        {% endif %}
+    </li>
+<!--<a href="#" class="search">Search</a>-->
+<a href="{% url 'basket:view' %}" class="basket">
+    Basket
+    <span>
+        {% if basket %} 
+            {{ basket|length }}
+        {% endif %}
+    </span>
+</a>
+</ul>
+</div>
