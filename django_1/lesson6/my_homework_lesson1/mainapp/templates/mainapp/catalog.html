@@ -1,0 +1,73 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block url_title %}
+    {{ title|capfirst }} 
+{% endblock %}
+
+{% block menu %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+{% endblock %}
+
+{% block caption %}
+    {{ caption|capfirst }}
+{% endblock %}
+
+{% block content %}
+    <div class="catalog_info">
+
+   <div class="catalog_info">
+        <div class="catalog_book_info">
+            <h3 class="">Горячее предложение</h3>
+            <img class="catalog_book_cover" src="{{ hot_product.image_file.url }}" alt="{{ hot_product.alt }}" title="{{ hot_product.title }}">
+            <div class="catalog_book_title">{{ hot_product.author }}: {{ hot_product.title }}</h3>
+            <p>{{ hot_product.description }}</p>
+            <p class="">{{ hot_product.price }} <span>rub</span></p>
+            <a href="#" class="">
+                Order
+            </a><br><br>
+        </div>
+        <hr>  
+        <h3 class="">Похожие продукты</h3>
+            {% for book in same_products %}
+                <div class="catalog_book_info"> 
+                    <img class="catalog_book_cover" src="{{ book.image_file.url }}" alt="{{ book.alt }}" title="{{ book.title }}">
+                    <h4 class="catalog_book_title">{{ book.author }}: {{ book.title }}</h4>
+                    <p class="">{{ book.price }} <span>rub</span></p>
+                    <p>{{ book.description }}</p>
+                    <p><a href="{% url 'books:book1' %}">{{ book.title }}</a></p>
+                    <a href="#" class="">
+                        Order
+                    </a><br><br>
+                </div>
+            {% endfor %} 
+            <hr>
+        {% for book in books %}
+            <div class="catalog_book_info">
+                <!--<img class="catalog_book_cover" src="{% static 'img/' %}{{book.image_file}}" alt="{{ book.alt }}" title="{{ book.title }}">-->
+                <img class="catalog_book_cover" src="{{ book.image_file.url }}" alt="{{ book.alt }}" title="{{ book.title }}">
+                <h4 class="catalog_book_title">{{ book.author }}: {{ book.title }}</h4>
+                <p class="">{{ book.price }} <span>rub</span></p>
+                <p>{{ book.description }}</p>
+                <!--<p><a href="{% url 'books:book1' %}">{{ book.url_name }}</a></p> DELETE-->
+                <p><a href="{% url 'books:book1' %}">{{ book.title }}</a></p>
+                <a href="#" class="">
+                    Order
+                </a><br><br>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="paginator">
+        {% if books.has_previous %}
+            <a href="{% url 'books:page' 1 books.previous_page_number %}"><</a>
+        {% endif %}
+        {% if books.paginator.num_pages > 1 %}
+            <span class="current">
+                страница {{ books.number }} из {{ books.paginator.num_pages }}
+            </span>
+        {% endif %}
+        {% if books.has_next %}
+            <a href="{% url 'books:page' 1 books.next_page_number %}">></a>
+        {% endif %}
+    </div>
+{% endblock %}
